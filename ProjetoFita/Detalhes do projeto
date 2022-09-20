@@ -1,0 +1,19 @@
+## PASTA DE ARQUIVOS DO PROJETO DE FITAS ##
+
+Introdução
+Durante muito tempo, antes do surgimento dos tocadores de MP3, era comum gravarmos nossas músicas preferidas em uma fita (Figura 1) para que pudéssemos ouvir nos nostálgicos Walkman. 
+Para gravar as músicas na fita podíamos usar os dois lados da fita (lado A e lado B). 
+Naquela época tinha disponível nas lojas vários modelos de fitas com durações de tempo diferentes, lembrado que os dois lados da fita (A e B) tem o mesmo tempo de duração.
+Imagine que você encontrou um velho Walkman e várias fitas para gravar uma lista de músicas, a sua tarefa é escrever um programa que dado uma lista de músicas, encontra uma combinação de músicas de forma que seja possível gravar a todas as músicas na fita, usando os dois lados da fita. 
+As músicas que serão gravadas têm durações de tempo expressa em minutos e segundos.
+
+Entrada
+A entrada da lista de músicas será feita por um arquivo texto composta de N conjuntos de teste (listas de músicas). 
+A primeira linha do arquivo possui um inteiro N que indica a quantidade de testes no arquivo. 
+Em seguida vem os testes para o seu programa, para cada testes temos um número inteiro T que indica o tempo total em minutos da fita, ou seja, o tempo somado dos lados A e B. 
+Na mesma linha um segundo inteiro L que indica a quantidade de músicas para ser avaliada nesse teste.
+Após essas informações é informado a lista de músicas com o tempo de cada música com dois pares inteiros M e S (0 <= M,S <=59) representando os minutos e segundos da música, considere que duas músicas em um conjunto de teste não terão a mesma duração.
+
+Saída
+Para cada conjunto de testes, caso tenha uma combinação, deve ser apresentado uma linha com informação da duração da fita (a soma dos dois lados), em seguida o texto “Lado A” e músicas, com suas respectivas durações, que devem ser gravadas desse lado, em seguida, o texto “Lado B” com as músicas para este lado. 
+Caso não seja possível gravar TODAS as músicas emitir uma mensagem informando
