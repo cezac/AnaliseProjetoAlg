@@ -1,0 +1,47 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+
+//Variaveis globais
+int tempo_total;  // Tempo total das músicas
+int tempo_fita = 30; // Tempo total da fita
+int n = 4; // Número de músicas
+int *fita; // Criando ponteiro para vetor
+
+// Vetores
+int musicas[] = {3,4,10,3}; // Músicas a serem gravadas
+
+// Funções
+bool permuta (int a[], int n, int c, int b[]);
+bool valida (int a[], int c);
+bool gravar_fita (int a[], int n);
+int segundos (int tempo_total, int tempo_fita, int a[]) // Função para conversão dos minutos das musicas para segundos
+    { 
+    tempo_total = 0;
+	tempo_fita = tempo_fita * 60; // Tempo total da fita, em segundos
+	
+	for (int i=0; i< n; i++){
+		printf("Tempo da musica %d, em minutos = %d\n", i, musicas[i]);
+		musicas[i] = musicas[i] *60;
+		tempo_total += musicas[i];
+	}
+	
+	printf ("\n");
+	printf ("Tempo total da fita, em segundos= %d\n", tempo_fita);
+	printf ("Tempo de cada lado da fita, em segundos= %d\n", tempo_fita/2);
+	printf ("Tempo total das musicas, em segundos= %d\n", tempo_total);
+}
+
+int main()
+{
+    fita = (int *)(calloc(n, sizeof(int)));
+    printf (" %d ", fita);
+    for (int i=0; i < n; i++)
+    {
+        printf ("Valor armazenado no elemento de indice [%d] = %d \n", i, fita[i]);    
+    }
+    printf ("\n");
+    
+    segundos (tempo_total, tempo_fita, musicas);
+	return 0;
+}
